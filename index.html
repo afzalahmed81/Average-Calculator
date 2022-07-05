@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculator</title>
+    <style type="text/css">
+        body{
+            background-color: black;
+        }
+        .container {
+            border: 2px solid red;
+            border-radius: 15px;
+            margin: auto;
+            padding: 10px;
+            background-color: blanchedalmond;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 600px;
+            height: 750px;
+            text-align: center;
+        }
+        button{
+            color: brown;
+            background-color:darkgray;
+        }
+        button:hover {
+            color:chocolate;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Average Calculator</h1>
+        <h4>This Program takes 10 numbers as input from user, calculates their <br>
+        Average and prints the result on the screen. </h4>
+        <form onsubmit="calculate(); return false;">
+
+            <label for="number01">Number 01</label>
+            <input type="number" min="0" required id="number01" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number02">Number 02</label>
+            <input type="number" min="0" required id="number02" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number03">Number 03</label>
+            <input type="number" min="0" required id="number03" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number04">Number 04</label>
+            <input type="number" min="0" required id="number04" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number05">Number 05</label>
+            <input type="number" min="0" required id="number05" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number06">Number 06</label>
+            <input type="number" min="0" required id="number06" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number07">Number 07</label>
+            <input type="number" min="0" required id="number07" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number08">Number 08</label>
+            <input type="number" min="0" required id="number08" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number09">Number 09</label>
+            <input type="number" min="0" required id="number09" placeholder="Enter a positive number">
+            <br><br>
+            <label for="number10">Number 10</label>
+            <input type="number" min="0" required id="number10" placeholder="Enter a positive number">
+            <br><br>
+           
+            <button type="submit">Calculate</button>
+
+    
+    </form>
+    <h1 id="average"></h1>
+    <script>
+        function calculate() {
+        let number01 = parseFloat(document.querySelector("#number01").value);  
+        let number02 = parseFloat(document.querySelector("#number02").value);
+        let number03 = parseFloat(document.querySelector("#number03").value);
+        let number04 = parseFloat(document.querySelector("#number04").value);
+        let number05 = parseFloat(document.querySelector("#number05").value);
+        let number06 = parseFloat(document.querySelector("#number06").value);
+        let number07 = parseFloat(document.querySelector("#number07").value);
+        let number08 = parseFloat(document.querySelector("#number08").value);
+        let number09 = parseFloat(document.querySelector("#number09").value);
+        let number10 = parseFloat(document.querySelector("#number10").value);
+
+        // number01 = parseFloat(number01);
+        
+        let sum = (number01+number02+number03+number04+number05+number06+number07+number08+number09+number10);
+        
+        let average = (sum/10);
+        
+
+        document.querySelector("#average").innerHTML = `The Average of the given numbers is ${average}`;
+        
+
+        }
+    </script>
+
+
+    </div>
+    
+</body>
+</html>
